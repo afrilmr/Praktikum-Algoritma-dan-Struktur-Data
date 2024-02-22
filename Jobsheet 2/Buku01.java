@@ -12,7 +12,11 @@ void tampilInformasi() {
 }
 
 void terjual(int jml) {
-    stok -= jml;
+    if (stok > 0) {
+        stok -= jml; 
+    } else {
+        System.out.println("Stok tidak mencukupi!");
+    }  
 }
 
 void restock(int jml) {
